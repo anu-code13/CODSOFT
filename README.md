@@ -1,3 +1,4 @@
+
 # Personal Portfolio - Anvesha Munankar
 
 This is a clean, modern, and responsive personal portfolio web application built with HTML5 and CSS3. It serves as a personal space on the internet to showcase my skills and projects as a BSc IT student exploring web development.
@@ -39,3 +40,6 @@ portfolio/
 
 1. Simply open the `portfolio.html` file in your preferred web browser. No local server or build tools are required!
 2. To edit or update the resume, edit `resume.html`, open it in a browser, and use "Print to PDF" to replace `resume.pdf`.
+
+# CODSOFT
+
