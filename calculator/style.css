@@ -1,0 +1,173 @@
+/* Base Reset and Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-color: #eaf2fc; /* Very soft light blue for the page */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    color: #1e293b;
+}
+
+/* Elegant Ambient Glow */
+.ambient-background {
+    position: absolute;
+    width: 60vw;
+    height: 60vh;
+    background: radial-gradient(circle, rgba(167, 200, 255, 0.3) 0%, rgba(234, 242, 252, 0) 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    border-radius: 50%;
+    animation: pulse 8s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+    100% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+}
+
+/* Light Blue Calculator Container */
+.calculator {
+    width: 350px;
+    background: #b1d4ff; /* Beautiful light blue */
+    border-radius: 36px;
+    padding: 30px;
+    box-shadow: 0 25px 50px rgba(100, 140, 200, 0.25), 
+                inset 0 2px 4px rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Display Screen */
+.display {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: inset 0 2px 6px rgba(100, 140, 200, 0.15);
+    min-height: 110px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.previous-operand {
+    color: #475569;
+    font-size: 1.1rem;
+    min-height: 1.5rem;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.current-operand {
+    color: #0f172a;
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+/* Keypad Grid */
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+/* Crisp White Circular Keys */
+.key {
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background: #ffffff;
+    color: #1e3a8a; /* Deep blue text for contrast */
+    box-shadow: 0 4px 10px rgba(100, 140, 200, 0.15),
+                inset 0 -2px 0 rgba(220, 230, 245, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s ease;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Hover & Active Effects */
+.key:hover {
+    background: #f8fbff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(100, 140, 200, 0.2),
+                inset 0 -2px 0 rgba(220, 230, 245, 0.5);
+}
+
+.key:active {
+    background: #f0f5fa;
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(100, 140, 200, 0.1);
+}
+
+/* Action and Operator Modifiers */
+.key.action {
+    color: #e11d48; /* Crimson red */
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.key.operator {
+    color: #2563eb; /* Vibrant royal blue */
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+/* Specific button overrides */
+.key.clear {
+    grid-column: span 2;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.key.zero {
+    grid-column: span 2;
+    width: 100%;
+    border-radius: 30px;
+    justify-content: flex-start;
+    padding-left: 24px;
+}
+
+.key.equals {
+    background: #2563eb;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3),
+                inset 0 -2px 0 rgba(29, 78, 216, 0.5);
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.key.equals:hover {
+    background: #3b82f6;
+    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.4),
+                inset 0 -2px 0 rgba(29, 78, 216, 0.5);
+}
+
+.key.equals:active {
+    background: #1d4ed8;
+    box-shadow: 0 2px 5px rgba(37, 99, 235, 0.3);
+}
