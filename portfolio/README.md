@@ -41,5 +41,5 @@ portfolio/
 1. Simply open the `portfolio.html` file in your preferred web browser. No local server or build tools are required!
 2. To edit or update the resume, edit `resume.html`, open it in a browser, and use "Print to PDF" to replace `resume.pdf`.
 
-# CODSOFT
+
 
